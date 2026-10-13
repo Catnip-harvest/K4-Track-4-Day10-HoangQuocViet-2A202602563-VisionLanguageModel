@@ -35,6 +35,8 @@ def setup():
     sh(f"git clone -q {REPO_URL} {REPO} && cd {REPO} && git checkout -q {REF} && git log --oneline -1",
        check=True)
     sh(f"cd {REPO} && pip install -q -r requirements-colab.txt 2>&1 | tail -3", check=True)
+    # torchao 0.10 có sẵn trên Kaggle làm peft lỗi khi gắn LoRA vào nn.Linear fp16 của ViT (E3).
+    sh("pip uninstall -y -q torchao")
     sh(f"cd {REPO} && python scripts/prepare_data.py --source /kaggle/input --work /tmp/w",
        check=True)
     sh("python -c \"import torch, transformers, peft, trl, bitsandbytes as b; "
