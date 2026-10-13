@@ -1,0 +1,15 @@
+{
+  "setup": "E5-GRPO",
+  "init_adapter": "/kaggle/working/ckpt/e3/adapter",
+  "projector": "/kaggle/working/ckpt/e3/projector.pt",
+  "max_steps": 60,
+  "lr": 5e-06,
+  "num_generations": 4,
+  "max_completion_length": 128,
+  "beta": 0.0,
+  "prompts_per_step": 2,
+  "trainable_params": 39321600,
+  "peak_vram_gb": 5.65,
+  "train_minutes": 24.0,
+  "gpu": "Tesla T4"
+}

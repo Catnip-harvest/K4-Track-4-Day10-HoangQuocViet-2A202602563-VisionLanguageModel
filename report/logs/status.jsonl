@@ -1,0 +1,11 @@
+{"name": "infer_e0", "gpu": 1, "rc": 0, "minutes": 16.1}
+{"name": "train_e1", "gpu": 0, "rc": 0, "minutes": 37.9}
+{"name": "infer_e1", "gpu": 0, "rc": 0, "minutes": 11.5}
+{"name": "train_e2", "gpu": 1, "rc": 0, "minutes": 39.2}
+{"name": "infer_e2", "gpu": 1, "rc": 0, "minutes": 9.9}
+{"name": "train_e3", "gpu": 0, "rc": 0, "minutes": 46.9}
+{"name": "infer_e3", "gpu": 0, "rc": 0, "minutes": 9.9}
+{"name": "grpo_e5", "gpu": 1, "rc": 0, "minutes": 24.5}
+{"name": "infer_e5", "gpu": 1, "rc": 0, "minutes": 9.3}
+{"name": "train_e4_data_0.1", "gpu": 0, "rc": 0, "minutes": 46.3}
+{"name": "infer_e4_data_0.1", "gpu": 0, "rc": 0, "minutes": 11.7}

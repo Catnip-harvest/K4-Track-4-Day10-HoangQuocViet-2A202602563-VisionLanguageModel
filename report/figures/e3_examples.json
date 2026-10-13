@@ -1,0 +1,131 @@
+[
+ {
+  "file": "e3_1_good.jpg",
+  "image_id": "vlcsnap-2025-02-18-23h13m50s113",
+  "kind": "good",
+  "tp": 2,
+  "fp": 0,
+  "fn": 0,
+  "gt_labels": [
+   "manhole",
+   "manhole"
+  ],
+  "pred_labels": [
+   "manhole",
+   "manhole"
+  ]
+ },
+ {
+  "file": "e3_2_good.jpg",
+  "image_id": "vlcsnap-2025-02-18-23h13m52s540",
+  "kind": "good",
+  "tp": 2,
+  "fp": 0,
+  "fn": 0,
+  "gt_labels": [
+   "manhole",
+   "manhole"
+  ],
+  "pred_labels": [
+   "manhole",
+   "manhole"
+  ]
+ },
+ {
+  "file": "e3_3_good.jpg",
+  "image_id": "vlcsnap-2025-02-18-23h13m55s630",
+  "kind": "good",
+  "tp": 2,
+  "fp": 0,
+  "fn": 0,
+  "gt_labels": [
+   "manhole",
+   "manhole"
+  ],
+  "pred_labels": [
+   "manhole",
+   "manhole"
+  ]
+ },
+ {
+  "file": "e3_4_bad.jpg",
+  "image_id": "vlcsnap-2025-02-19-17h03m31s261",
+  "kind": "bad",
+  "tp": 0,
+  "fp": 7,
+  "fn": 5,
+  "gt_labels": [
+   "pothole",
+   "pothole",
+   "pothole",
+   "pothole",
+   "crack"
+  ],
+  "pred_labels": [
+   "pothole",
+   "pothole",
+   "pothole",
+   "pothole",
+   "pothole",
+   "pothole",
+   "pothle"
+  ]
+ },
+ {
+  "file": "e3_5_bad.jpg",
+  "image_id": "vlcsnap-2025-02-18-23h10m39s932",
+  "kind": "bad",
+  "tp": 0,
+  "fp": 4,
+  "fn": 1,
+  "gt_labels": [
+   "manhole"
+  ],
+  "pred_labels": [
+   "crack",
+   "crack",
+   "crack",
+   "manhole"
+  ]
+ },
+ {
+  "file": "e3_6_bad.jpg",
+  "image_id": "vlcsnap-2025-02-18-23h28m38s634",
+  "kind": "bad",
+  "tp": 0,
+  "fp": 1,
+  "fn": 5,
+  "gt_labels": [
+   "crack",
+   "crack",
+   "crack",
+   "crack",
+   "pothole"
+  ],
+  "pred_labels": [
+   "crack"
+  ]
+ },
+ {
+  "file": "e3_7_bad.jpg",
+  "image_id": "vlcsnap-2025-02-18-23h30m28s990",
+  "kind": "bad",
+  "tp": 2,
+  "fp": 1,
+  "fn": 5,
+  "gt_labels": [
+   "pothole",
+   "pothole",
+   "pothole",
+   "pothole",
+   "crack",
+   "crack",
+   "crack"
+  ],
+  "pred_labels": [
+   "crack",
+   "pothole",
+   "pothole"
+  ]
+ }
+]

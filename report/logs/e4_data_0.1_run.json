@@ -1,0 +1,17 @@
+{
+  "setup": "E3",
+  "rank": 16,
+  "train_fraction": 0.1,
+  "train_images": 142,
+  "max_steps": 300,
+  "lr": 0.0002,
+  "batch_size": 2,
+  "grad_accum": 4,
+  "seed": 42,
+  "trainable_params": 148426752,
+  "trainable_projector_params": 109105152,
+  "matched_lora_modules": 348,
+  "peak_vram_gb": 7.67,
+  "train_minutes": 45.9,
+  "gpu": "Tesla T4"
+}
