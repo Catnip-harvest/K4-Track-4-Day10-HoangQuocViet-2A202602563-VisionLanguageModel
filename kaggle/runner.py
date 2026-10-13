@@ -15,7 +15,7 @@ from pathlib import Path
 
 STAGE = "__STAGE__"
 REF = "__REF__"
-REPO_URL = "https://github.com/Catnip-harvest/K4-Track-4-Day10-VisionLanguageModel.git"
+REPO_URL = "https://github.com/Catnip-harvest/K4-Track-4-Day10-HoangQuocViet-2A202602563-VisionLanguageModel.git"
 REPO = Path("/tmp/repo")
 OUT = Path("/kaggle/working/out")      # tải về máy: dự đoán, log, run.json
 CKPT = Path("/kaggle/working/ckpt")    # adapter/projector: giữ trên Kaggle, không đưa vào git
