@@ -79,8 +79,10 @@ def quantization_config():
         bnb_4bit_compute_dtype=torch.float16,
         bnb_4bit_use_double_quant=True,
         # ViT (gồm cả merger/deepstack) và lm_head giữ fp16: merger phải là tham số thật
-        # thì E2/E3 mới huấn luyện đầy đủ được.
-        llm_int8_skip_modules=["visual", "lm_head"],
+        # thì E2/E3 mới huấn luyện đầy đủ được. transformers 5.19 so khớp tên từ ĐẦU đường dẫn
+        # (re.match) hoặc theo đuôi, nên "visual" một mình KHÔNG khớp "model.visual.merger...":
+        # phải ghi "model.visual" (xem assert_vit_not_quantized).
+        llm_int8_skip_modules=["visual", "model.visual", "lm_head"],
     )
 
 
@@ -91,7 +93,16 @@ def load_base_model():
         MODEL_ID, quantization_config=quantization_config(),
         dtype=torch.float16, device_map={"": 0})
     processor = AutoProcessor.from_pretrained(MODEL_ID)
+    assert_vit_not_quantized(model)
     return model, processor
+
+
+def assert_vit_not_quantized(model):
+    """Dừng sớm nếu bitsandbytes đã lượng tử hoá ViT/projector hoặc lm_head."""
+    quantized = [n for n, m in model.named_modules()
+                 if type(m).__name__ == "Linear4bit" and (n.startswith("model.visual") or n == "lm_head")]
+    if quantized:
+        raise RuntimeError(f"{len(quantized)} module ViT/lm_head bị lượng tử hoá 4-bit, ví dụ {quantized[:2]}")
 
 
 def projector_names(name):

@@ -99,13 +99,8 @@ def smoke():
             infer(0, "s3_val", "s3", split="val", limit=16)
 
     def gpu1():
-        infer(1, "s0_val", split="val", limit=16)
-        if train(1, "s1", "E1", "--max-steps", "3", "--grad-accum", "1"):
-            run(1, "grpo_s5", ["day10.grpo", "--adapter", str(CKPT / "s1" / "adapter"),
-                               "--out", str(CKPT / "s5"), "--max-steps", "2"])
-            for f in ("run.json", "reward_log.jsonl", "log_history.json"):
-                if (CKPT / "s5" / f).exists():
-                    shutil.copy(CKPT / "s5" / f, OUT / f"s5_{f}")
+        if train(1, "s2", "E2", "--max-steps", "3", "--grad-accum", "1"):
+            infer(1, "s2_val", "s2", split="val", limit=8)
     parallel(gpu0, gpu1)
 
 
