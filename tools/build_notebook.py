@@ -30,7 +30,7 @@ hàng đợi thí nghiệm. Các ô dưới đây nạp lại dự đoán và lo
 import json, subprocess, sys
 from pathlib import Path
 print(Path('report/logs/env.txt').read_text(encoding='utf-8'))
-print(subprocess.run([sys.executable, '-m', 'pytest', '-q', 'tests', 'day10/tests'],
+print(subprocess.run([sys.executable, '-m', 'pytest', '-q', '--color=no', 'tests', 'day10/tests'],
                      capture_output=True, text=True).stdout.strip().splitlines()[-1])
 """),
     md("## 1. Dữ liệu: split theo phiên quay"),
@@ -177,7 +177,7 @@ score('work/e4_data_0.1.jsonl', 'E4_data_0.1', 'report/evidence/e4_data_0.1.json
 score(f'work/{best}.jsonl', 'E4_data_1.0', 'report/evidence/e4_data_1.0.json', *meta_of(best))
 """),
     code("""
-print(subprocess.run([sys.executable, '-m', 'pytest', '-q', 'day10/tests/test_reward.py'],
+print(subprocess.run([sys.executable, '-m', 'pytest', '-q', '--color=no', 'day10/tests/test_reward.py'],
                      capture_output=True, text=True).stdout.strip().splitlines()[-1])
 score('work/e5.jsonl', 'E5', 'report/evidence/e5.json', *meta_of('e5'))
 hist = [h for h in json.loads(Path('report/logs/e5_log_history.json').read_text()) if 'reward' in h]

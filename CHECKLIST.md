@@ -7,5 +7,7 @@
 - [x] `git rev-list --count HEAD` ≥ 5, mỗi commit một bước.
 - [x] `python scripts/check_submission.py`: 0 FAIL, 0 WARN.
 - [x] `scripts/`, `tests/`, `configs/` giữ nguyên bản gốc của đề (`git diff upstream/main -- scripts tests configs` rỗng).
-- [x] `python -m pytest -q`: 68 passed, 1 skipped (test của đề); `python -m pytest -q day10/tests`: 10 passed (reward E5).
+- [x] `python -m pytest -q`: 67 passed, 1 skipped, 1 failed. Test hỏng là `test_report_template_has_student_markers_and_ten_questions`:
+  nó kiểm tra *mẫu* REPORT.md còn chuỗi `<điền`, nên sẽ hỏng khi báo cáo đã điền (điều `check_submission.py` bắt buộc).
+  Trước khi điền báo cáo: 68 passed, 1 skipped. `python -m pytest -q day10/tests`: 10 passed (reward E5).
 - [x] Repo ở chế độ Public.
