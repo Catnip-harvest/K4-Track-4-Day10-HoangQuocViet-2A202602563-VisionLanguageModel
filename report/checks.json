@@ -1,0 +1,74 @@
+{
+  "params": {
+    "vit_blocks_and_patch_embed": 306242560,
+    "visual.merger": 27271680,
+    "visual.deepstack_merger_list": 81833472,
+    "llm (language_model + lm_head)": 4022468096,
+    "total_unique": 4437815808,
+    "tie_word_embeddings": true
+  },
+  "lora_modules": {
+    "E1": 252,
+    "E2": 252,
+    "E3": 348
+  },
+  "deepstack_visual_indexes": [
+    5,
+    11,
+    17
+  ],
+  "example": {
+    "image_id": "20250216_164325",
+    "image_size": [
+      640,
+      360
+    ],
+    "image_grid_thw": [
+      [
+        1,
+        22,
+        40
+      ]
+    ],
+    "image_tokens": 220,
+    "image_pad_tokens_in_input_ids": 220,
+    "seq_len": 562,
+    "supervised_tokens": 250,
+    "answer": "[{\"label\":\"crack\",\"bbox_2d\":[430,467,583,506]},{\"label\":\"pothole\",\"bbox_2d\":[361,475,414,522]},{\"label\":\"manhole\",\"bbox_2d\":[317,481,616,625]},{\"label\":\"pothole\",\"bbox_2d\":[583,500,627,614]},{\"label\":\"crack\",\"bbox_2d\":[580,508,655,614]},{\"label\":\"pothole\",\"bbox_2d\":[259,517,311,572]},{\"label\":\"crack\",\"bbox_2d\":[397,628,447,717]},{\"label\":\"crack\",\"bbox_2d\":[339,683,398,808]},{\"label\":\"crack\",\"bbox_2d\":[158,789,361,994]}]",
+    "decoded_supervised": "[{\"label\":\"crack\",\"bbox_2d\":[430,467,583,506]},{\"label\":\"pothole\",\"bbox_2d\":[361,475,414,522]},{\"label\":\"manhole\",\"bbox_2d\":[317,481,616,625]},{\"label\":\"pothole\",\"bbox_2d\":[583,500,627,614]},{\"label\":\"crack\",\"bbox_2d\":[580,508,655,614]},{\"label\":\"pothole\",\"bbox_2d\":[259,517,311,572]},{\"label\":\"crack\",\"bbox_2d\":[397,628,447,717]},{\"label\":\"crack\",\"bbox_2d\":[339,683,398,808]},{\"label\":\"crack\",\"bbox_2d\":[158,789,361,994]}]<|im_end|>\n",
+    "keys": [
+      "attention_mask",
+      "image_grid_thw",
+      "input_ids",
+      "labels",
+      "mm_token_type_ids",
+      "pixel_values"
+    ]
+  },
+  "collate_shapes": {
+    "input_ids": [
+      2,
+      562
+    ],
+    "attention_mask": [
+      2,
+      562
+    ],
+    "labels": [
+      2,
+      562
+    ],
+    "mm_token_type_ids": [
+      2,
+      562
+    ],
+    "pixel_values": [
+      1760,
+      1536
+    ],
+    "image_grid_thw": [
+      2,
+      3
+    ]
+  }
+}
